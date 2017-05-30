@@ -8,6 +8,10 @@
   <name>shopweb Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
+  <properties>
+    <tomcat.url>http://localhost:8003/manager/text</tomcat.url>
+  </properties>
+  
   <dependencies>
     <!-- https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
@@ -31,6 +35,19 @@
     
   </dependencies>
   <build>
+    <pluginManagement>
+       <plugins>
+          <plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<url>${tomcat.url}</url>
+					<server>tomcat</server>
+				</configuration>
+			</plugin>
+       </plugins>
+    </pluginManagement>
     <finalName>shopweb</finalName>
   </build>
   
