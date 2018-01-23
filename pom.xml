@@ -48,7 +48,7 @@
   <configuration>
     <force>true</force>
     <hostname>${35.165.195.55}</hostname>
-    <port>${9990}</port>
+    <port>${9999}</port>
     <username>${Teja}</username>
     <password>${lockpop1215}</password>
     <filename>${shopweb.war}</filename>
